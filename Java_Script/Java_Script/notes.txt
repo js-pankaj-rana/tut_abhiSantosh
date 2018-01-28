@@ -1,0 +1,78 @@
+=>JavaScript is the programming language for html and web.
+
+=>External Scripts are practical when the same code is used for many different languages:
+
+=> <script src="myScript.js"></script>
+
+=> Writing into an HTML element, using innerHTML.
+
+=> Writing into the HTML output using document.write();
+
+=> Writing into an alert box, using window.alert().
+
+=> Writing into the browser console, using console.log().
+
+=>To access an HTML element, javascript can use the document.getElementById() method.
+
+=>The id/class attribute define the HTML element. The innerHTML property define the HTML content.
+
+=>The JavaScript syntax defines two types of values: Fixed values and Variable values.
+
+=>Fixed values are called literals where as Variable values are called variables.
+
+=>Hypens are not allowed in javascript. It is reserved for substraction.
+
+=>Old javascript examples may use a type attribute: <script type="text/javascript">
+	The type attribute is not required now a days. JavaScript is default scripting language in HTML.
+
+=>A JavaScript function is the block of JavaScript code that can be executed when called for. A function can be called when an events occurs, like an user click the mouse button or keyboard stroke.
+
+=>Scripts can be placed in the <body> or in the <head> section of an HTML element or both.
+
+=>JavaScript Display Possibilities: JavaScript can display data in different ways:
+
+====>Writing into HTML element, using innerHTML.
+
+====>Writing into HTML output, using document.write().
+
+===>Writing into an alert box, using window.alert().
+
+===>Writing into the browser console, using console.log().
+
+=>JavaScript statement are composed of :
+Values, Operators, Expressions, Keywords, and Comments.
+
+=>Semicolons seperate javascript statements. (Ending statement with semicolons is not required, but highly recommended).
+
+=>JavaScript ignores multiple spaces. You can add white space in your script to make it more readable.
+
+=>JavaScript statement can be grouped together in code blocks, inside curly brackets.
+
+=>Strings are text, written within single or double quotes.
+
+=>An expression is a combination of values, variables, and operators which computes to a value.
+
+=>In JavaScript, identifiers are used to name variable (and keyword, and function, and labels).
+
+=>All JavaScript identifers are case sensitive. JavaScript does not interpret VAR or var as the keyword var.
+
+=>Hyphens are not allowed in javascript. It is reserved for subtractions.
+
+=>All JavaScript variables must be identified with unique names. These unique names are called identifiers.
+
+=>When adding a string and a number, javascript will treat the number as a string.
+
+=>JavaScript evaluates expressions from left to right. Different sequence can produce different result.
+
+=>JavaScript has dynamic types. This means that the same variable is used for different data types.
+
+=>String are written with quotes. You can use single quotes as well as double quotes. 
+
+	=>>We can also use single quotes inside double quotes.
+	=>>We can also use double quotes inside single quotes.
+
+=>Boolean can only have values true and false. Booleans are often used in conditional testing.
+
+=>JavaScript array are written with square brackets. Array item's are seperated by commas. Array indexes are zero-based, which means the first item is [0], Second is [1], and so on.
+
+=>Adding two numbers, will return the sum, but adding a number and string will return a always string.

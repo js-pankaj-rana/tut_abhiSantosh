@@ -1,0 +1,101 @@
+.red-stripper{
+	background-color: red;
+	color: #fff;
+}
+
+.red-stripper a{
+	color: #fff;
+	cursor: pointer;
+}
+.red-stripper .new.white{
+	color:blue;
+}
+.red-stripper .new{
+	color:yellow;
+}
+
+.ml-10{
+	margin-left: 10px;
+}
+.mt-10{
+	margin-top: 10px;
+}
+.mb-0{
+	margin-bottom: 0px !important;
+}
+.mb-10{
+	margin-bottom: 10px;
+}
+.pl-0{
+	padding-left: 0px !important;
+}
+.pr-0{
+	padding-right: 0px !important;
+}
+
+.red-stripper .glyphicon{
+	font-size: 12px;
+}
+.blue-stripper{
+	background-color: #27408B;
+}
+.dropbtn {
+    background-color: #27408B;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.bdr-left-white, .dropbtn {
+	border-left:2px solid #fff; 
+}
+.bdr-right-white{
+	border-right:2px solid #fff; 
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #27408B;
+}
+
+.w100{
+	width: 100%;
+}
+
+.max-h-200{
+	max-height: 200px;
+	overflow: auto;
+}

@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+</head>
+<body>
+	<button onclick="pushData()">Add Name</button>
+	
+	<ul id="arrData"></ul>
+
+	<script type="text/javascript">
+		
+
+		var myarr = ['Ram', 'Sudhir', 'Ramesh'];
+			myarr.sort();
+
+		var descArr = [];
+
+		for(var i=0; i<myarr.length; i++){
+				var nind = myarr.length-1-i; 
+				descArr.push(myarr[nind])
+			}
+
+			console.log(descArr);
+
+	</script>
+</body>
+</html>

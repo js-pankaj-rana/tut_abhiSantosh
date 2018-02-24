@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+</head>
+<body>
+	<button onclick="pushData()">Add Name</button>
+	
+	<ul id="arrData"></ul>
+
+	<script type="text/javascript">
+		
+		var myarr = ['Ram', 'Sudhir', 'Ramesh'];
+
+		function renderArray(){
+			var renderHtml = [];
+			myarr.forEach(function(val, ind, arr){
+				// console.log("val==>"+val+" ind==>"+ind+ " arr==>"+ arr);
+				renderHtml.push("<li>"+val+" <button>Delete</button> <button>Edit</button></li>");
+			})			
+			 var html = renderHtml.join('');
+			 console.log(html);
+			 document.getElementById('arrData').innerHTML = html;
+		}
+
+		function pushData(){
+			var nData = prompt("Please enter a name", 'Ram1')
+			myarr.push(nData);
+			renderArray();
+		}
+
+		renderArray();
+	</script>
+</body>
+</html>

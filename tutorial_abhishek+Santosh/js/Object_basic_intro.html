@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+</head>
+
+<!-- https://developer.mozilla.org/ms/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript -->
+<!-- https://www.w3schools.com/js/js_properties.asp -->
+
+<!-- https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp -->
+<body>
+
+	<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+	<script>
+
+		// contructor	
+		// class
+		// object
+		// prototype
+		// inheritance
+		// encapsulation
+		// polymerphism
+		// namespace
+
+
+		var Form = {
+			// data: $('.form').serialize(),
+			validation: function(){
+				alert('check validation');
+			},
+			checkEmail: function(elementId){
+				var email =  document.getElementById(elementId).value;
+				console.log(email);
+			}
+
+		}
+
+		var dataJson = {
+				"name": "Disha",
+				"age":25
+			}
+
+	</script>
+</body>
+</html>

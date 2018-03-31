@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Day 0</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>	
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Japan
+				</div>
+				<div class="panel-body">
+					<span id="timeStamp1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Monaco
+				</div>
+				<div class="panel-body">
+					<span id="timeStamp2"></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Israel
+				</div>
+				<div class="panel-body">
+					<span id="timeStamp3"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<style>
+	.timeWrap{
+		float: right;
+		line-height:30px;
+		height: 30px;
+		background-color: #b71c1c;
+		color:#fff; 
+		padding:0 10px;  
+		display: inline-block;
+		font-family: Arial, helvetica, sans-serif;
+	}
+</style>
+
+<script type="text/javascript">
+	function calcTime(city, offset, elementID) {
+    // create Date object for current location
+    var d = new Date();
+
+    // convert to msec
+    // subtract local time zone offset
+    // get UTC time in msec
+    var utc = d.getTime() - (d.getTimezoneOffset() * 60000);
+
+    // create new Date object for different city
+    // using supplied offset
+    var nd = new Date(utc + (3600000*offset));
+
+    // return time as a string
+    // return "The local time for city"+ city +" is "+ nd.toLocaleString();
+
+    document.getElementById(elementID).innerHTML =  "The local time for city "+ city +" is "+ nd.toLocaleString();
+}
+
+setInterval(function(){
+	calcTime('Japan', '+9.0', 'timeStamp1');
+	calcTime('Monaco', '+1.0', 'timeStamp2');
+	calcTime('Israel', '+2.0', 'timeStamp3');
+}, 1000)
+</script>
+</body>
+</html>

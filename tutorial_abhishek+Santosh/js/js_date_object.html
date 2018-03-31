@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Day 0</title>
+</head>
+<body>
+	
+<div class="timeWrap">
+	<span class="hh" id="hh">00</span>:<span class="mm" id="mm">00</span> <span class="second" id="second">00</span> <span class="status" id="status">AM</span>
+</div>
+
+<style>
+	.timeWrap{
+		float: right;
+		line-height:30px;
+		height: 30px;
+		background-color: #b71c1c;
+		color:#fff; 
+		padding:0 10px;  
+		display: inline-block;
+		font-family: Arial, helvetica, sans-serif;
+	}
+</style>
+
+<script type="text/javascript">
+	var hours = document.getElementById('hh'), minute = document.getElementById('mm'), second = document.getElementById('second'), hhState = document.getElementById('status');
+
+
+			var GetTime = new Date();
+			hours.innerHTML = GetTime.getHours();
+			minute.innerHTML = GetTime.getMinutes();
+			second.innerHTML = GetTime.getSeconds();
+
+		
+
+		function dateInit(){
+		var GetTime = new Date();
+
+		var meridum = 'AM';
+		var hh = GetTime.getHours();
+		var mm = GetTime.getMinutes();
+		var ss = GetTime.getSeconds();
+
+		if( ss < 10){
+			ss = '0'+ss;
+		}
+
+		
+
+
+		if( hh > 12){
+			meridum = 'PM';
+			hh = hh - 12;
+
+			if( hh < 10){
+				hh = '0'+hh;
+			}
+		}
+		if( mm < 10){
+			mm = '0'+mm;
+		}
+		hours.innerHTML = hh;
+		minute.innerHTML = mm;
+		second.innerHTML = ss;		
+		hhState.innerHTML = meridum;		
+				
+	}
+
+	setInterval(function(){ 
+			dateInit();
+		}, 300);
+	
+// https://greenwichmeantime.com/time-zone/
+// http://www.ccrainternational.com/tools/InternationalTimeZones.html
+</script>
+</body>
+</html>

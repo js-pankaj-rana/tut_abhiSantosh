@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Day 0</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+	<script src="script/jquery-1.11.2.min.js"></script>
+	<!-- https://www.regextester.com/     -->
+	<!-- http://html5pattern.com/ -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form>
+               <!--  <div class="input-group">
+                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                   <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+               </div> -->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" onblur="pwdComplexityCheck(this)" >
+                    
+                </div>
+
+               <!--  <div class="input-group">
+                   <span class="input-group-addon">Text</span>
+                   <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+               </div> -->
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	function pwdComplexityCheck(obj){
+    		var pattern1 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
+    		var pattern2 = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+    		var ipVal = $(obj).val();
+    		try {
+                
+    			if( ipVal == '' && ipVal == undefined ){
+    				return false;
+    			}
+    			else if( pattern1.test(ipVal) && ipVal.length < 6  )  {
+    				alert("Your password is very simple");	
+    			}
+
+    			else if( pattern2.test(ipVal) ) {
+    				alert("Your password is very complex");	
+    			}
+    			
+			}
+			catch(err) {
+				alert('wwww');
+			}
+    		
+
+    	}
+
+    </script>
+</body>
+
+</html>

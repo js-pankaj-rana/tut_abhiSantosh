@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Grid System</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+	<div class="container bg-primary">
+		<div class="row">
+			<div class="col-md-3 bg-danger box-h">
+				<h2>Global Research</h2>
+				<p>Lorem ipsom sj flk sdklf askldf klasdf. Lorem ipsom sj flk sdklf askldf klasdf Lorem ipsom sj flk sdklf askldf klasdf Lorem ipsom sj flk sdklf askldf klasdf</p>
+				 </div>
+			<div class="col-md-3 bg-warning box-h"></div>
+			<div class="col-md-3 bg-danger box-h"></div>
+			<div class="col-md-3 bg-success box-h"></div>
+		</div>
+
+	</div>
+	<style>
+		.box-h{ min-height: 360px; padding-left: 30px; padding-right: 30px;}
+		.box-h h2{ padding-right: 60%; font-size: 1.3em; padding-bottom: 8px; }
+		.row .box-h:first-child {
+					
+		background: #1e5799; /* Old browsers */
+		background: -moz-linear-gradient(left, #1e5799 0%, #57aace 0%, #7db9e8 100%, #58abcf 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, #1e5799 0%,#57aace 0%,#7db9e8 100%,#58abcf 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, #1e5799 0%,#57aace 0%,#7db9e8 100%,#58abcf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#58abcf',GradientType=1 ); /* IE6-9 */
+		}
+		.row .box-h p{
+			line-height: 28px;
+		}
+	</style>
+</body>
+</html>

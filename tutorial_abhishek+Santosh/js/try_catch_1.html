@@ -1,0 +1,43 @@
+<html>
+   
+   <head>
+      
+      <script type="text/javascript">
+         <!--
+            function myFunc()
+            {
+               var a;
+               try {
+                  alert("Value of variable a is : "  + a );
+
+                  if(a == undefined){
+                     throw("a is undefined");   
+                  }
+               } 
+               
+               catch ( error ) {
+                  // e.description == e.message
+                  alert("Error: " + error.description );
+                  // alert("Error: " + error.message );
+               }
+
+               finally {
+                  console.log('hheradsf')
+               }
+            }
+
+
+         //-->
+      </script>
+      
+   </head>
+   
+   <body>
+      <p>Click the following to see the result:</p>
+      
+      <form>
+         <input type="button" value="Click Me" onclick="myFunc();" />
+      </form>
+      
+   </body>
+</html>

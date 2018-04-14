@@ -1,22 +1,37 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Try and Catch Exeption Handling</title>
+	<script src="js/try_catch.js" ></script>
 </head>
 <body>
 	<script>
-   var date = new Date(); 
+		function addTwoNum(x,y) {
+				var z  = x+y;
+				console.log(z);
+			}
 
-   // getDay
-   // getDate
-   // getMonth
-   // getYear
-   // getMinute
-   // getSecond
-   // getHour
+	try {
 
-  </script>
+			addTwoNum(3, y);
 
+			throw new Error('Wrong parameter supplies!');
+		}
+		catch(error) {
+			/*if(error instanceof ReferenceError){
+					alert('Required Parameter is not fullfilled')
+				}*/
+				 console.log(error.name + ': ' + error.message);
+
+		  // console.log(error);
+		  // expected output: SyntaxError: unterminated string literal
+		  // Note - error messages will vary depending on browser
+		}
+
+
+		alert('hello world');
+
+</script>
 
 </body>
 </html>

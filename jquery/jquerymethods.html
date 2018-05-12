@@ -1,0 +1,105 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script src="script/jquery-3.3.1.js"></script>
+	<style>
+		section.night{
+			background-color: #000000;
+			color:#fff;
+		}
+		section{
+			transition: all 1.5s ease-in;
+		}
+		
+	</style>
+</head>
+<body>
+	<section>
+		<form class="form" name="myForm">
+			<div class="row form--input">
+				<div class="col m6 s12">
+					<label>Label Text</label>
+					<input type="text" class="form--input--text" name="xyz1">
+				</div>
+				<div class="col m6 s12">
+					<label>Label Text</label>
+					<input type="text" name="xyz">
+				</div>
+			</div>
+			<div class="row form--input">
+				<div class="col m6 s12">
+					<label>Label Text</label>
+					<input type="text" class="form--input--email" name="xyz2">
+				</div>
+				<div class="col m6 s12">
+					<label>Label Text</label>
+					<input type="text" name="xyz5">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col m6 s12">
+					<label>Label Text</label>
+					<input type="text" name="xyz3">
+				</div>
+				<div class="col m6 s12">
+					<label class="is-Label-For-Xyz">Label Text</label>
+					<input type="text" name="xyz4">
+				</div>
+				<button type="submit">Submit</button>
+			</div>
+
+		</form>	
+		<div class="outputdata">
+			
+		</div>
+	</section>
+	<script type="application/javascript">
+	
+		$(document).ready( function() {
+			// dom tree forming 
+			$( "p" ).add( "div" ).addClass( "widget" );
+
+			console.log('Working10');
+			$('form[name$="rm"]').hover(function(){
+				// alert('hhh')
+			})
+
+			$('[type="submit"]').on('click', function(e) {
+			 e.preventDefault();
+				console.log(e);
+				
+				$('.outputdata').text('<p>this is dummy test</p>');
+			})
+
+		});
+
+		/*$(window).on('load', function() {
+			// after loading all nodes and js and css load
+			// dom tree and paint
+			console.log('Working11');
+			// alert('Working')
+
+		})
+	*/
+
+	
+	// show()
+	// hide()
+	// toggle()
+	// addClass()
+	// removeClass()
+	// toggleClass()
+	// fadeIn()
+	// fadeOut()
+	// fadeToggle()
+	// slideUp()
+	// slideDown()
+	// slideToggle()
+
+//HW animate() 
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Range Overflow Exapmle in JavaScript</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<p>Enter a number and click OK:</p>
+	<input id="id1" type="number" max="100">
+	<button onclick="myFunction()">OK</button>
+	<p>If the number is greater than 100 (the input's max attribute), an error message will be displayed.</p>
+	<p id="demo"></p>
+	<script>
+	function myFunction(){
+	var txt="";
+
+	$('#id1').val() > 100 ? console.log('Value is greater than 100') : console.log('It seems good to go');
+
+
+
+	/*if(document.getElementById("id1").validity.rangeOverflow)
+	{
+	txt = "Value too large";
+	}
+	else
+	{
+	txt = "Input Okk";
+	}*/
+	document.getElementById("demo").innerHTML = txt;
+	}
+	</script>
+</body>
+</html>

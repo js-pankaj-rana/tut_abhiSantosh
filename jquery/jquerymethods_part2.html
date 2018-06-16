@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script src="script/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<section>
+		<button class="js-fnt-size-ap">A+</button>
+		<button class="js-fnt-size-am">A-</button>
+		<button class="js-fnt-size-ad">A</button>
+
+		<h1 style="display: none">Header Test Data</h1>
+		<h2>Header Test Data</h2>
+		<h3>Header Test Data</h3>
+		<h4>Header Test Data</h4>
+		<h5>Header Test Data</h5>
+		
+		<ul>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+		</ul>
+		<button class="js-click">Animate Me</button>
+	</section>
+
+	<script>
+		 // js filter
+		 	/*:eq()
+		 	:lt()
+		 	:gt()
+		 	:first
+		 	:last
+		 	:nth-child()*/
+		 	// https://oscarotero.com/jquery/
+
+
+		$(document).ready(function (){
+			$('.js-click').on('click', function(){
+				$('li:eq(2)').css({'color': 'red', 'backgroundColor': 'yellow', 'fontSize': '20px'}).animate({
+					'opacity': 0,
+					'height': 0
+				}, {
+					duration: 800,
+					complete: function(){
+						$('li:eq(2)').css('display','none');
+					}
+				});
+			})
+		})
+	</script>
+	
+</body>
+</html>

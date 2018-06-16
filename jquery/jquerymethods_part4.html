@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<script src="script/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<section>
+		<button class="js-fnt-size-ap">A+</button>
+		<button class="js-fnt-size-am">A-</button>
+		<button class="js-fnt-size-ad">A</button>
+
+		<h1 style="display: none">Header Test Data</h1>
+		<h2>Header Test Data</h2>
+		<h3>Header Test Data</h3>
+		<h4>Header Test Data</h4>
+		<h5>Header Test Data</h5>
+		
+		<ul>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+			<li>the quick brown fox jumps over the lazy dog.</li>
+		</ul>
+		<button class="js-click">Animate Me</button>
+	</section>
+
+	<script>
+		 $(document).ready(function (){
+			var count = 0;
+			$('button.js-fnt-size-ap').on('click', function(){
+				$('body *').animate({'fontSize': "+=2"}, 500);
+				count++;
+				console.log(count);
+			})
+
+			$('button.js-fnt-size-am').on('click', function(){
+				$('body *').animate({'fontSize': "-=2"}, 500 );
+				count--;
+				console.log(count);
+			})
+			$('button.js-fnt-size-ad').on('click', function(){
+				if(count > 0){
+					var fntCrntSize = (count * 2) + 2;
+					console.log(fntCrntSize);
+					$('body *').animate({'fontSize': "-="+fntCrntSize}, 500 );
+
+					count = 0;
+					console.log(count);
+				}
+
+			})
+		})
+	</script>
+	
+</body>
+</html>

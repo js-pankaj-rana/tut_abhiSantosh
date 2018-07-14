@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		body
+		/* Full-width input fields */
+		input[type=text], input[type=password]
+		{
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		}
+		/* Set a style for all buttons */
+		button
+		{
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+		}
+		button:hover
+		{
+		opacity: 0.8;
+		}
+		*/ Extra style for cancel button */
+		.cancelbtn
+		{
+		width: auto;
+		padding: 10px 18px;
+		background-color: #f44336;
+		}
+		*/ Center the image and position the close button */
+		.imgcontainer
+		{
+		text-align: center;
+		margin: 24px 0 12px 0;
+		position: relative;
+		}
+		img.avatar
+		{
+		width: 40%;
+		border-radius: 50%;
+		}
+		.container
+		{
+		padding: 16px;
+		}
+		span.psw
+		{
+		float: right;
+		padding-top: 16px;
+		}
+		*/ The Modal (background) */
+		.modal
+		{
+		display: none;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100;
+		overflow: auto;
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0,0.4);
+		padding-top: 60px;
+		}
+		.modal-content
+		{
+		background-color: #fefefe;
+		margin: 5% auto 15% auto;
+		border: 1px solid #888;
+		width: 80%;
+		}
+		.close
+		{
+		position: absolute;
+		right: 25px;
+		top: 0;
+		color: #000;
+		font-size: 35px;
+		font-weight: bold;
+		}
+		.close:hover,
+		.close:focus
+		{
+		color: red;
+		cursor: pointer;
+		}
+		/*Add Zoom Animation*/
+		.animate
+		{
+		-webkit-animation: animatezoom 0.6s;
+		animation: animatezoom 0.6s;
+		}
+		@-webkit-keyframes animatezoom
+		{
+		from {-webkit-transform: scale(0)}
+		to {-webkit-transform: scale(1)}
+		}
+		@keyframes animatezoom
+		{
+		from {transform: scale(0)}
+		to {transform: scale(1)}
+		}
+		/*Change styles for span and cancel button on extra small screen */
+		@media screen and (max-width: 300px)
+		{
+		span.psw
+			{
+				display:block;
+				float: none;
+			}
+		.cancelbtn
+			{
+			width: 100%;
+			}
+		}
+		*/ Accordion Panel Styleproperty*/
+		.accordion
+		{
+		background-color: #eee;
+		color: #444;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		text-align: left;
+		border: none;
+		outline: none;
+		transition: 0.4s;
+		}
+		.active, .accordion:hover
+		{
+		background-color: #ccc;
+		}
+		.panel
+		{
+		padding: 0 18px;
+		background-color: white;
+		display: none;
+		overflow: hidden;
+		}
+		</style>
+	</head>
+	<body>
+		<h2>Login Form</h2>
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		<div id="id01" class="modal" style="display: none;">
+			<form class="modal-content animate" action="/action_page.php">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times</span>
+					<p style="text-align:center"><img src="login.png" class="avatar"></p>
+				</div>
+				<div class="container">
+					<label for="uname"><b>UserName</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+					<button type="submit">Login</button>
+					<label>
+						<input type="checkbox" checked="checked" name="remember">Remember me</input>
+					</label>
+				</div>
+				<div class="container" style="background-color: #f1f1f1">
+					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+					<!-- <span class="psw">Forgot <a href="javascript:void(0)" onclick="console.log(event)">Password</a></span> -->
+					<span class="psw">Forgot <a href="#" onclick="event.preventDefault();console.log(event)">Password</a></span>
+				</div>
+			</form>
+		</div>
+		<script>
+		var modal = document.getElementById('id01');
+		window.onclick = function(event)
+		{
+		if(event.target == modal)
+		{
+		modal.style.display="none";
+		}
+		}
+		</script>
+		/*Accordion are useful when you want to toggle between hiding and showing large amount of content:*/
+		<button class="accordion" onclick="showacordian(this)">Section 1</button>
+		<div class="panel">
+			<p>Lorem ipsum..</p>
+		</div>
+		<button class="accordion" onclick="showacordian(this)">Section 2</button>
+		<div class="panel">
+			<p>Lorem ipsum..</p>
+		</div>
+		<button class="accordion" onclick="showacordian(this)">Section 3</button>
+		<div class="panel">
+			<p>Lorem ipsum...</p>
+		</div>
+
+		<script type="text/javascript">
+			
+			function showacordian(obj){
+				debugger;
+				console.log(obj);
+				var dd = obj.nextElementSibling;
+				dd.style.display = "Block";
+
+			}
+		</script>
+	</body>
+</html>

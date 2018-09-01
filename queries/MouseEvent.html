@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery Mouse Event's</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<script>
+$(document).ready(function(){
+
+$("#p1").mouseenter(function(){
+alert("You entered P1!");
+});
+
+$("#p1").mouseleave(function(){
+alert("Bye! You now leave p1");
+});
+
+$("#p2").mousedown(function(){
+alert("Mouse down over Jquery event handler");
+});
+
+$("#p2").mouseup(function(){
+alert("Mouse Up over Jquery event handler");
+});
+
+$("#p3").hover(function(){
+alert("You enter over Hover function effect's!");
+},
+function()
+{
+alert("Bye! You can leave Hover function effect!");
+});
+
+$("input").focus(function(){
+$(this).css("background-color", "#cccccc");
+});
+
+$("input").blur(function(){
+$(this).css("background-color", "#ffffff");
+});
+
+$("p").on("click", function(){
+	
+$(this).hide(1000);
+
+});
+});
+
+$(document).ready(function(){
+	
+	$("#btn1").click(function(){
+		$("#div1").fadeIn();
+		$("#div2").fadeIn("slow");
+		$("#div3").fadeIn(3000);		
+	});
+
+	$("#btn2").click(function(){
+		
+		$("#div1").fadeOut();
+		$("#div2").fadeOut("slow");
+		$("#div3").fadeOut(3000);
+
+});
+
+	$("#btn3").click(function(){
+		
+		$("#div1").fadeTo("slow", 0.15);
+		$("#div2").fadeTo("slow", 0.4);
+		$("#div3").fadeTo("slow", 0.7);
+
+	});
+
+	
+	
+	$("#stop").click(function(){
+		$("#panel1").stop();
+
+	});
+
+	 $("#flip1").click(function(){
+		$("#panel2").slideToggle("slow");
+		$("#panel1").slideToggle(5000);
+	});
+
+	$("#btn4").click(function(){
+		$("#animate").animate({left: '100px'}, {opacity: '0.4'}, "slow");
+		$("#animate").animate({fontSize: '3em'}, "slow");
+	});
+
+	$("#btn5").click(function(){
+		$("p4").css("color", "red").slideToggle(2000);	
+
+	});
+
+
+});
+
+
+
+//callback function examples
+
+
+
+</script>
+<p id="p1">Enter this Paragraph</p>
+
+<p id="p2">We're using Jquery event Handler</p>
+
+<p id="p3">Hover function effects</p>
+
+
+<p>If you click on me, I'll be dispear.</p>
+<p>Click me too!</p>
+<p>Click me away!</p>
+<p>Demonstrate fade in different parameters.</p>
+
+<button id="btn1">Click to fade in boxes</button><br/><br/>
+
+<button id="btn2">Click to fadeout in boxes</button><br/><br/>
+
+<button id="btn3">Click here to use fadeTo method</button><br/><br/>
+
+<button id="btn4">Start Animation</button><br/><br/>
+
+<p id="p4">Jquery is fun!</p><br/><br/>
+
+<button id="btn5">Click me for Slide Up and Slide Down</button><br/><br/>
+
+
+
+
+<div id="div1" style="width: 80px; height: 80px; display:none; background-color:red;"></div><br/>
+
+<div id="div2" style="width: 80px; height: 80px; display:none; background-color:green;"></div><br/>
+
+<div id="div3" style="width: 80px; height: 80px; display:none; background-color: blue;"></div><br/>
+
+<div id="flip1" style="padding: 5px; text-align: center; background-color: orange">Click to slide down the panel</div><br/><br/>
+
+<div id="panel1" style="padding: 50px; display: none; text-align: center; background-color: lime;">Hello World!</div><br/>
+
+<div id="panel2" style="padding: 50px; display: none; text-align: center; background-color: lime;">Hello World!</div><br/>
+
+<button id="stop">Stop Sliding</button>
+
+
+<div id="animate" style="background:#98bf21; height:100px; width:200px; position: absolute;">Hello</div>
+
+Name: <input type="text" name="fullname"><br/>
+
+Email: <input type="text" name="email">
+
+
+</body>
+</html>

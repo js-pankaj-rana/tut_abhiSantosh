@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<a>jQuery</a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a></a>
+		<a>jQuery</a>
+
+
+		<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+		
+		var anchorLists = $('a').get();
+
+
+		/*var filterEmptyAnchors = anchorLists.filter(function(anchor){
+			if(! anchor.textContent){
+				anchor.textContent = 'facebook.com';
+			}
+		 })*/
+		 $('a').each(function(index){
+		 	debugger;
+			if(! $(this).text().length){
+				$(this).attr({
+				'title': 'title value'+index,
+				'href': 'person/'+index,
+			}).text('PersonValue')
+			}
+		})
+
+		</script>
+	</body>
+</html>

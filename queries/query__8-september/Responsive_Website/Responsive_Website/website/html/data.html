@@ -1,0 +1,57 @@
+jQuery('[data-deleteUserproduct]').click(function(event){	
+
+		var productId = jQuery(event.target).val();
+
+		var deleteduserSessionId = jQuery(event.target).parent().parent().find('#uid').val();
+
+		var deletedproductname = jQuery(event.target).parent().parent().find('#uname').val();
+
+		var deleteInstitutionalUserSession = jQuery(event.target).parent().parent().find('#institutionalUser').val();
+
+		console.log(deletedproductname);
+
+		//var deactivateSession=jQuery(event.target).val();
+
+		console.log(jQuery(event.target).val())
+
+		/*var deactivateSession = jQuery(event.target).val() === 'deleteproductsession'? 'DeactivateSession' : '';
+
+		console.log(deactivateSession);
+
+		var deleteduserSessionId = jQuery('#uid').val();*/
+
+		//alert();
+
+		jQuery(".ui-widget-header").hide();
+
+		jQuery("#confirmPopUp").dialog();
+
+		jQuery(".dialogMessageTextConfirmPopUp").html("Do you really want to delete this session?  Press OK to continue and Cancel to return back.");
+
+		
+
+		jQuery("#confirmPopUpButton").click(function(){			
+
+			//$('#'+deactivateSession).submit();
+
+			//var deletedUserId = jQuery('#deleteproductbtn').val();		
+
+			alert("ok working");
+
+			 jQuery(window.location).attr('href','deleteUserProductController.htm?productId='+productId+"&guid="+deleteduserSessionId+"&productName="+deletedproductname+"&institutionalUser="+deleteInstitutionalUserSession);
+
+			//jQuery(window.location).attr('href','deleteUserProductController.htm?guid='+deleteduserSessionId);
+
+		});
+
+		
+
+		jQuery("#confirmPopUpCancel").click(function(){
+
+			jQuery("#confirmPopUp").dialog('close');
+
+		});
+
+	});		
+
+			

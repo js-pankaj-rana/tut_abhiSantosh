@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to push and pop element in array.</p>
+
+<button onclick="mynewFunction()">Push</button>
+
+<button onclick="myFunction()">Pop</button>
+
+
+
+<p id="demo"></p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+
+<script>
+var nfruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = nfruits;
+
+function mynewFunction() {
+    //fruits.push();
+    document.getElementById("demo2").innerHTML = nfruits.push("Kiwi", "Guava");
+    document.getElementById("demo1").innerHTML = nfruits;
+}
+
+//var fruits = ["Banana", "Orange", "Apple", "Mango"];
+//document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    nfruits.pop();
+    document.getElementById("demo2").innerHTML = nfruits;
+    }
+</script>
+
+</body>
+</html>

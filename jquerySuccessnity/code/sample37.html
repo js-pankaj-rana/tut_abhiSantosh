@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p><strong class="strong">first</strong></p>
+49
+<p>middle</p>
+<p><strong class="strong1">last</strong></p>
+<p id="para" class="para para12 prasdf"></p>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+// Alerts "strong".
+
+console.log( $('p').find('strong').get(0).classList);
+
+})(jQuery); </script>
+</body>
+</html>

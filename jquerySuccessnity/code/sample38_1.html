@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<span style="color:red">Text Red</span>
+		<span style="color:red">Text Red</span>
+		<span style="color:green">Text Green</span>
+		<span style="color:red">Text Red</span>
+		<span style="color:blue">Text Blue</span>
+		<span style="color:red">Text Red</span>
+
+		<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+		(function ($) {
+		
+			$('span').filter( function() {
+				return $(this).attr('style') === 'color:red';
+			}).wrap('<div data-color=\'red\'></div>')
+
+	})(jQuery);
+	</script>
+	</body>
+</html>

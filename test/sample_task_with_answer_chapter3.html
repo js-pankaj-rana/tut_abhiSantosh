@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<div>
+			Hello World
+			<p>this <span class="asb">is</span> a para <span style="color:green">Red</span> <span style="color:red">Red</span> <span style="color:red">Red</span> <span style="color:red">Red</span></p>
+		</div>
+<button>Alert the number of color class used</button>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+$(document).ready(function(){
+	$.expr[':'].colorRedElement = function(ele){
+		return $(ele).attr('style') == 'color:red';
+	}
+
+    $("button").click(function(){
+			alert($('span:colorRedElement').length);
+			// alert($('span[style="color:red"]').length)
+    });
+});
+		</script>
+		</body>
+	</html>

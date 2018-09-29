@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<form name="form1" onsubmit="javascript:void(0)">
+			<input name="inputName" type="text" name="search" />
+			<button id="submit" type="submit">Submit</button>	
+		</form>
+		<a name="anchor1" href="#google">Anchor 1</a>
+		<img name="image1" src="abc.png" /> 
+		<ul>
+			<li>jQuery is great.</li>
+			<li>It’s lightweight.</li>
+			<li>Its free!</li>
+			<li>jQuery makes everything simple.</li>
+		</ul>
+		<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script> (function($){
+			$('#submit').on('click', function(e){
+				e.preventDefault();
+				console.log(e);
+
+				var strongTags = $('strong');
+				if ( strongTags.parent().is( "li" ) ) {
+				    strongTags.unwrap();
+				  } 
+				  
+				
+				var searchValue = form1.inputName.value;
+				var pattern = new RegExp(searchValue);
+				$('ul li').filter(function () {
+					 return pattern.test($(this).text());
+				}).wrap('<strong></strong>');
+			})
+			
+			})(jQuery); </script>
+		</body>
+	</html>

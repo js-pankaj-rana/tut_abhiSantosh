@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Find Length of a String Using jQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var myStr = $("textarea").val();
+            if($(this).hasClass("with-space")){
+            	var withSpace = myStr.length;
+            	alert(withSpace);
+            }
+            else if($(this).hasClass("trimmed-space")){
+                var trimmedSpace = $.trim(myStr).length;
+            	alert(trimmedSpace);
+            }
+            else if($(this).hasClass("without-space")){
+                var withoutSpace = myStr.replace(/ /g,'').length;
+            	alert(withoutSpace);
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <h3>Enter Text and Click the Buttons</h3>
+    <textarea rows="5" cols="60">      Hi i've completed my task.   Please check.</textarea>
+    <br>
+    <button type="button" class="with-space">Length of string including white-spaces</button>
+    <br>
+    <button type="button" class="trimmed-space">Length of string after removing beginning and trailing white-spaces</button>
+    <br>
+    <button type="button" class="without-space">Length of string without white-spaces</button>
+</body>
+</html>                            

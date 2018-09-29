@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<div>
+			Hello World
+			<p>this is a para <span style="color:red">Red</span> <span style="color:red">Red</span> <span style="color:red">Red</span> <span style="color:red">Red</span></p>
+		</div>
+<p id="demo"></p>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script> 
+
+
+var x = $("div").clone().children().remove().end().text();
+
+$( "#demo").html(x);
+
+
+
+				 </script>
+		</body>
+	</html>

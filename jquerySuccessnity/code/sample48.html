@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+            <p>I love <strong>really</strong> using jQuery!</p>
+            <p id="love">I love using jQuery!</p>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+         (function($){
+            
+            $('#love').contents().get(0);
+            $('p').contents().get(1);
+
+
+            })(jQuery); </script>
+</html>
+	</body>
+

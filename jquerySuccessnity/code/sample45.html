@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+            <div id="nav">
+                <div>nav text</div>
+                <div>nav text</div>
+                <div>nav text</div>
+                <div>nav text</div>
+            </div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+         (function($){
+            
+            $('#nav div').click(function () {
+                // alert($('#nav div').index(this));
+                    
+                    alert( $(this).index() );
+
+                // or, a nice trick...
+                alert($(this).prevAll().length);
+            });
+
+
+            })(jQuery); </script>
+</html>
+	</body>
+

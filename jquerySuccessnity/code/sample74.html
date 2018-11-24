@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+	<div id="jq">click here</div>
+<div>click me <span href="http://www.google.com">click here</span></div>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+
+$('div').on('click', function(event) {
+	event.stopPropagation();
+
+	alert('Hello World');
+
+})
+
+
+$('span').on('click', function(event) {
+	event.preventDefault();
+	 event.stopPropagation();
+	alert('Hello World 2');
+	
+})
+
+$('div#jq').bind('myCustomEvent', function () {
+// Bind a custom event to <div>.
+	window.location = 'http://www.jquery.com';
+});
+
+setTimeout(function(){
+	$('div#jq').trigger('myCustomEvent')
+}, 5000 );
+
+
+})(jQuery); </script>
+</body>
+</html>

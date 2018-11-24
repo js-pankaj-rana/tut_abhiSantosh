@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<a>Say Hi</a>
+<!--clicking this element will alert "hi" -->
+<a>Say Hi</a>
+
+<button id="clickbtn">click me</button>
+<!--clicking this element will alert "hi" -->
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+// Bind a click handler to all <a> and immediately invoke their handlers.
+// $('a').click(function () { alert('hi') }).click();
+// $('a').click(function () { alert('hi') }).trigger('click');
+// Page will alert twice. On page load, a click
+// is triggered for each <a> in the wrapper set.
+
+$('#clickbtn').on('click', function(event) {
+    let {type, target, data, relatedTarget, currentTarget, pageX, pageY, result, timeStamp} = event;
+    console.log(type, target, data, relatedTarget, currentTarget, pageX, pageY, result, timeStamp);
+
+})
+})(jQuery); </script>
+</body>
+</html>

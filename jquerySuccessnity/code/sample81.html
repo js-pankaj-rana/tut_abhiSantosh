@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<style>
+		li {
+			padding-bottom: 500px;
+		}
+		</style>
+		<ul>
+			<li>asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf h asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf h asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf h asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf h asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf h asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf h asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf h asdfhkasdf kasd fkja sdfkjl askdjfh jkalsdfh kjladsf kjlha jdkf haklsd fhaskh dfjkah djfk jkaldf jkad fkjadsh fjkas kdfjh asdfkh kjadhf jkah jfkh asjdkfh kjadsf <br/><a href="#" class="next">Next</a></li>
+			<li><a href="#" class="next">Next</a>/<a href="#" class="prev">Previous</a></li>
+			<li><a href="#" class="next">Next</a>/<a href="#" class="prev">Previous</a></li>
+			<li><a href="#" class="prev">Previous</a></li>
+		</ul>
+		<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script> (function ($) {
+		if($('.next')){
+			$('.next')
+			.click(function () { $('html, body').animate({ scrollTop:
+			$(this).parent().next().find('a').offset().top }, 1000); });
+		}
+		
+		if($('.prev')){
+		
+			$('.prev')
+			.click(function () { $('html, body').animate({ scrollTop:
+			$(this).parent().prev().find('a').offset().top }, 1000); });
+		}
+		})(jQuery); </script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style="position: relative;">
+	<div style="width: 100px; height: 100px; background-color: red; position: relative;">
+		
+
+	</div>
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script> (function ($) {
+
+	$('body').click(function (e) {
+		var relativeX = e.pageX - this.offsetLeft;
+		var relativeY = e.pageY - this.offsetTop;
+		alert(relativeY);
+		$(this).html('releativeX = ' + relativeX + ', releativeY = ' + relativeY);
+})
+
+})(jQuery); </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="counter1"></div>
+    <ul>
+        <li id="list-1">jd</li>
+    </ul>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        (function ($) {
+            $.fn.count = function () {
+                // "this" is equal to jQuery('#counter1').
+                alert(this); // Alerts jQuery object.
+                alert(this[0]); // Alerts div element.
+                alert(this[0].id); // Alerts "counter1".
+            };
+
+            $('#list-1').on('click', function(){
+                console.log( $(this)[0].id );
+            })
+        })(jQuery);
+        // jQuery('#counter1').count();
+    </script>
+</body>
+</html>

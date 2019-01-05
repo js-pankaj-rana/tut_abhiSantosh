@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+           
+   <div id="images"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+//         (function() {
+//   var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+//   $.getJSON( flickerAPI, {
+//     tags: "mount rainier",
+//     tagmode: "any",
+//     format: "json"
+//   })
+//   .success(function(res, resStatus, status){
+//       console.log("res==>",res, "resStatus==>",resStatus, "status==>",status);
+
+//       $.each( res.items, function( i, item ) {
+//           debugger;
+//         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+//         if ( i === 3 ) {
+//           return false;
+//         }
+//       });
+
+//   })
+//   .error( function(err){
+//       console.log(err)
+//   })
+//     .done(function( data ) {
+//         console.log("done");
+//     });
+// })();
+
+        (function ($) {
+          
+            // $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=resig&tagmode=all&format=json&jsoncallback=?",
+            //     // Using ? just means call the callback function provided.
+            //     function (data) { // Data is the JSON object from Flickr.
+            //     $.each(data.items, function (i, item) { $('<img />').attr("src", item.media.m).appendTo('#images'); if (i == 30) return false; });
+            //     });
+
+
+                $.ajax({
+                    url: 'http://ranasteelco.herokuapp.com/api/contactus',
+                    data: JSON.stringify({contactUserEmail: "abc@ggmail.com", contactUserMessage: "I want to buy your product", contactUserName: "Pankaj12312"}),
+                    type: 'POST',
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function (responseData, textStatus, jqXHR) {
+                        console.log("res==> " + responseData, "resultData==>" + textStatus, "jqXHR==>" + jqXHR);
+                    },
+                    error: function (err) {
+                        console.log("err==>", err.responseText)
+                    },
+                    done: function () {
+                        console.log("done");
+                    }
+                })
+
+         })(jQuery);
+
+
+         
+    </script>
+</body>
+
+</html>

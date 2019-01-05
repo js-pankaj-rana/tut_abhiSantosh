@@ -1,0 +1,14 @@
+{
+  "name": "sasspractice",
+  "version": "1.0.0",
+  "description": "This is create for sass practce.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass --output-style -o ./css/ ./sass/ --watch"
+  },
+  "author": "Abhishek Jha",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

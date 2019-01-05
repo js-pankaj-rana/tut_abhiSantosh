@@ -1,0 +1,7 @@
+@import './variable';
+
+h1 {
+    color: $primary-color;
+    font-size: $font-large;
+    font-family: $font-type-1;
+}
